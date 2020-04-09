@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="209dp"
+        android:clickable="true"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067"
+        app:srcCompat="@drawable/corona" />
+
+    <Button
+        android:id="@+id/factie"
+        android:layout_width="140dp"
+        android:background="@drawable/homebtn"
+        android:layout_height="51dp"
+        android:clickable="true"
+        android:textColor="#fff"
+        android:text="COVID-facts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:shadowRadius="@android:integer/config_shortAnimTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homie"
+        android:background="@drawable/homebtn"
+        android:layout_width="140dp"
+        android:text=" Home-Screening "
+        android:shadowRadius="@android:integer/config_shortAnimTime"
+        android:textColor="#fff"
+        android:layout_height="51dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.652" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:background="#fff"
+        android:padding="5dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.067"
+            app:srcCompat="@drawable/who" />
+
+        <Button
+            android:id="@+id/livie"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="80dp"
+            android:background="#fff"
+            android:text="Track the live status of \ncorona virus now" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
