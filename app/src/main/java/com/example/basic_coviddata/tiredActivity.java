@@ -23,9 +23,14 @@ public class tiredActivity extends AppCompatActivity {
         next=findViewById(R.id.next);
         sympotoms=new Sympotoms();
 
-        if(tired.isChecked()){
-            sympotoms.setTiredness(true);
-        }
+        tired.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Boolean check=((CheckBox)view).isChecked();
+                sympotoms.setTiredness(check);
+                if(!check)sympotoms.setTiredness(false);
+            }
+        });
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override

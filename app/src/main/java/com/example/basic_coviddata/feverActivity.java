@@ -23,9 +23,14 @@ public class feverActivity extends AppCompatActivity {
         fever=findViewById(R.id.fever);
         sympotoms=new Sympotoms();
 
-        if(fever.isChecked()){
-            sympotoms.setFever(true);
-        }
+        fever.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked=((CheckBox)view).isChecked();
+                sympotoms.setFever(checked);
+                if(!checked)sympotoms.setFever(false);
+            }
+        });
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override

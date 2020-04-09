@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class TestActivity extends AppCompatActivity {
 
@@ -23,9 +24,14 @@ public class TestActivity extends AppCompatActivity {
         next=findViewById(R.id.next);
         sympotoms=new Sympotoms();
 
-        if(cough.isChecked()){
-            sympotoms.setCough(true);
-        }
+        cough.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked=((CheckBox)view).isChecked();
+                sympotoms.setCough(checked);
+                if(!checked)sympotoms.setCough(false);
+            }
+        });
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override

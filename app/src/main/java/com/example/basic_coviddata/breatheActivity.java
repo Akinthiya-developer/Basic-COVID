@@ -23,9 +23,14 @@ public class breatheActivity extends AppCompatActivity {
         next=findViewById(R.id.next);
         sympotoms=new Sympotoms();
 
-        if(breathe.isChecked()){
-            sympotoms.setBreathe(true);
-        }
+        breathe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checked=((CheckBox)view).isChecked();
+                sympotoms.setBreathe(checked);
+                if(!checked)sympotoms.setBreathe(false);
+            }
+        });
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
