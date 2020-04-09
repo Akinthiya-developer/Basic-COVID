@@ -26,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
         homie=findViewById(R.id.homie);
         livie=findViewById(R.id.livie);
 
+        homie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,HomeScreenActivity.class));
+            }
+        });
+
         livie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,9 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = anotherCustomTab.intent;
                 intent.setData(Uri.parse("https://www.bing.com/covid"));
-                
-                builder.setShowTitle(true);
 
+                builder.setShowTitle(true);
 
                 CustomTabsIntent customTabsIntent = builder.build();
                 customTabsIntent.launchUrl(MainActivity.this, Uri.parse(url));
