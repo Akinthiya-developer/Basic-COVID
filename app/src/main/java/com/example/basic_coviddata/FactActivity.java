@@ -41,8 +41,8 @@ public class FactActivity extends AppCompatActivity {
         le.setItemAnimator(new DefaultItemAnimator());
 
         for(int i=0;i<up.length;i++){
-            evento.add(up[0]);
-            regiso.add(donw[0]);
+            evento.add(up[i]);
+            regiso.add(donw[i]);
         }
         adapter=new cycleAdapter(getApplicationContext(),evento,regiso);
         le.setAdapter(adapter);
