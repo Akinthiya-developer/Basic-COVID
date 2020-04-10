@@ -27,8 +27,8 @@ public class tiredActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Boolean check=((CheckBox)view).isChecked();
-                sympotoms.setTiredness(check);
-                if(!check)sympotoms.setTiredness(false);
+                sympotoms.setTiredness(1);
+                if(!check)sympotoms.setTiredness(0);
             }
         });
 
@@ -36,6 +36,7 @@ public class tiredActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(tiredActivity.this,breatheActivity.class));
+                finish();
             }
         });
 

@@ -28,22 +28,26 @@ public class ConclusionActivity extends AppCompatActivity {
         button=findViewById(R.id.button);
         button2=findViewById(R.id.button2);
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ConclusionActivity.this,HelpLineActivity.class));
+            }
+        });
+
         sympotoms=new Sympotoms();
 
-        if(sympotoms.getBreathe())severity+=1;
-        if(sympotoms.getCough())severity+=1;
-        if(sympotoms.getFever())severity+=1;
-        if(sympotoms.getTiredness())severity+=1;
+        severity=sympotoms.getBreathe()+sympotoms.getCough()+sympotoms.getTiredness()+sympotoms.getFever();
+        if(severity>=3 || sympotoms.getBreathe()>=1){
+            safe.setVisibility(GONE);
+        }/*alr.setVisibility(GONE);*/
 
         Toast.makeText(this, Integer.toString(severity), Toast.LENGTH_SHORT).show();
-
-        if(severity>=3 || sympotoms.getBreathe())safe.setVisibility(GONE);
-        else alr.setVisibility(GONE);
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ConclusionActivity.this,MainActivity.class));
+                startActivity(new Intent(ConclusionActivity.this,PreventionActivity.class));
                 finish();
             }
         });

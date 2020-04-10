@@ -27,8 +27,8 @@ public class breatheActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 boolean checked=((CheckBox)view).isChecked();
-                sympotoms.setBreathe(checked);
-                if(!checked)sympotoms.setBreathe(false);
+                sympotoms.setBreathe(1);
+                if(!checked)sympotoms.setBreathe(0);
             }
         });
 
@@ -36,6 +36,7 @@ public class breatheActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(breatheActivity.this,ConclusionActivity.class));
+                finish();
             }
         });
 

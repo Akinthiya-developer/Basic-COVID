@@ -2,40 +2,40 @@ package com.example.basic_coviddata;
 
 public class Sympotoms {
 
-    boolean fever;
-    boolean cough;
-    boolean tiredness;
-    boolean breathe;
+    int fever;
+    int cough;
+    int tiredness;
+    int breathe;
 
-    public boolean getFever() {
-        return fever;
-    }
-
-    public boolean getCough() {
-        return cough;
-    }
-
-    public boolean getTiredness() {
-        return tiredness;
-    }
-
-    public boolean getBreathe() {
-        return breathe;
-    }
-
-    public void setFever(boolean fever) {
+    public void setFever(int fever) {
         this.fever = fever;
     }
 
-    public void setCough(boolean cough) {
+    public void setCough(int cough) {
         this.cough = cough;
     }
 
-    public void setTiredness(boolean tiredness) {
+    public void setTiredness(int tiredness) {
         this.tiredness = tiredness;
     }
 
-    public void setBreathe(boolean breathe) {
+    public void setBreathe(int breathe) {
         this.breathe = breathe;
+    }
+
+    public int getFever() {
+        return fever;
+    }
+
+    public int getCough() {
+        return cough;
+    }
+
+    public int getTiredness() {
+        return tiredness;
+    }
+
+    public int getBreathe() {
+        return breathe;
     }
 }

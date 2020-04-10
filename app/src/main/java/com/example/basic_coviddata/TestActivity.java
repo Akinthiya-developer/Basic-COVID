@@ -28,8 +28,8 @@ public class TestActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 boolean checked=((CheckBox)view).isChecked();
-                sympotoms.setCough(checked);
-                if(!checked)sympotoms.setCough(false);
+                sympotoms.setCough(1);
+                if(!checked)sympotoms.setCough(0);
             }
         });
 
@@ -37,6 +37,7 @@ public class TestActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(TestActivity.this,feverActivity.class));
+                finish();
             }
         });
 
