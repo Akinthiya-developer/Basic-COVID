@@ -33,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        factie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,FactActivity.class));
+            }
+        });
+
         livie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

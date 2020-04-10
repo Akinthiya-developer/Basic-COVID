@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PreventionActivity"></activity>
+        <activity android:name=".FactActivity"></activity>
+        <activity android:name=".PreventionActivity" />
         <activity android:name=".HelpLineActivity" />
         <activity android:name=".ConclusionActivity" />
         <activity android:name=".breatheActivity" />
